@@ -3,8 +3,10 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 5000;
 
-const categories = require("../news-feeder-server/data/categories.json");
-const news = require("../news-feeder-server/data/news.json");
+// const categories = require("../news-feeder-server/data/categories.json");
+const categories = require("./data/categories.json");
+// const news = require("../news-feeder-server/data/news.json");
+const news = require("./data/news.json");
 app.use(cors());
 app.get("/", (req, res) => {
   res.send("Dragon server is running");
